@@ -11,10 +11,10 @@
 <body>
     <div id="app">
         <div class="container my-4">
-            <div class="row">
+            <div class="row h-100">
                 <!-- INIZIO COLONNA CONTATTI -->
-                <div class="col-5">
-                    <div class="contacts">
+                <div class="col-5 h-100">
+                    <div class="contacts h-100">
                         <header> <!-- Inizio header -->
                             <div class="profile">
                                 <div class="profileImg">
@@ -43,7 +43,7 @@
                             <div class="input">
                                 <div class="input-group">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </div>
                             <div class="contactsList"> <!-- Inizio lista contatti -->
@@ -70,8 +70,8 @@
                 </div>
                 <!-- FINE COLONNA CONTATTI -->
                 <!-- INIZIO COLONNA CONVERSAZIONI -->
-                <div class="col-7">
-                    <div class="messages">
+                <div class="col-7 h-100">
+                    <div class="messages h-100">
                         <header> <!-- Inizio header -->
                             <div class="profile">
                                 <div class="profileImg">
@@ -90,12 +90,33 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </header> <!-- Fine header -->
-                        <main>
-                            
-                        </main>
-                        <footer>
-
-                        </footer>
+                        <main> <!-- Inizio main -->
+                            <div class="conversation">
+                                <div class="message sent">
+                                    Hai portato a spasso il cane?
+                                    <div class="time">
+                                        15:30
+                                    </div>
+                                </div>
+                                <div class="message sent">
+                                    Ricordati di stendere i panni
+                                    <div class="time">
+                                        15:50
+                                    </div>
+                                </div>
+                                <div class="message received">
+                                    Tutto fatto!
+                                    <div class="time">
+                                        16:15
+                                    </div>
+                                </div>
+                            </div>
+                        </main> <!-- Fine main -->
+                        <footer> <!-- Inizio footer -->
+                            <i class="fa-regular fa-face-smile"></i>
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                            <i class="fa-solid fa-microphone"></i>
+                        </footer> <!-- Fine footer -->
                     </div>
                 </div>
                 <!-- FINE COLONNA CONVERSAZIONI -->
