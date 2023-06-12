@@ -6,15 +6,75 @@
 body {
     background-image: linear-gradient(180deg, #009688 15%, #D9DBD4 15%);
     height: 100vh;
-    font-size: 14px;
+    font-size: 13px;
 }
 /* INIZIO STILE CONTATTI */
-.contacts header {
+.contacts header, .contacts main {
     border-right: 1px solid rgb(177, 177, 177);
 }
 .profile, .console {
     display: flex;
     align-items: center;
+}
+/* Inizio stile notification */
+.notification {
+    padding: 70px 10px 10px;
+    display: flex;
+    background-color: rgb(142, 218, 252);
+}
+.notification i {
+    background-color: white;
+    padding: 10px 8px;
+    border-radius: 50%;
+    color: rgb(142, 218, 252);
+}
+.notification .text {
+    margin-left: 10px;
+}
+.notification a {
+    display: block;
+    font-size: 11px;
+    color: rgb(177, 177, 177);
+}
+.contacts main {
+    background-color: white;
+    height: calc(100% - 120px);
+}
+.input {
+    padding: 5px;
+    background-color: rgb(250, 250, 250);
+}
+.input-group-text, .form-control {
+    border-radius: 1px;
+}
+.input-group-text {
+    background-color: white;
+}
+.input i {
+    font-size: 15px;
+    margin: 0 15px;
+    color: rgb(177, 177, 177);
+}
+/* Inizio stile lista contatti */
+.contact {
+    padding: 10px;
+    position: relative;
+}
+hr {
+    margin: 0;
+    border: 1px solid rgb(177, 177, 177);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.contact .profileImg {
+    height: 50px;
+    width: 50px;
+    margin: 0 20px 0 10px;
+}
+.time {
+    float: right;
 }
 /* FINE STILE CONTATTI */
 /* INIZIO STILE CONVERSAZIONI */
@@ -50,13 +110,15 @@ img {
     width: 100%;
     border-radius: 50%;
 }
-.accesso {
-    font-size: 12px;
+.accesso, .time, .lastMessage {
+    font-size: 11px;
     color: rgb(177, 177, 177);
 }
 header i {
-    font-size: 20px;
     margin: 0 10px;
     color: rgb(177, 177, 177);
+}
+i {
+    font-size: 20px
 }
 /* FINE STILE GENERALE */
