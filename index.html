@@ -47,14 +47,14 @@
                                 </div>
                             </div>
                             <div class="contactsList"> <!-- Inizio lista contatti -->
-                                <div class="contact d-flex justify-content-between">
+                                <div class="contact d-flex justify-content-between" v-for="(contact, index) in contacts">
                                     <hr>
                                     <div class="d-flex">
                                         <div class="profileImg">
-                                            <img src="./img/avatar_1.jpg" alt="Michele">
+                                            <img :src="contact.avatar" :alt="name">
                                         </div>
                                         <div class="name">
-                                            Michele
+                                            {{contact.name}}
                                             <div class="lastMessage">
                                                 Ultimo messaggio inviato
                                             </div>
