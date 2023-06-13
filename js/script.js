@@ -167,11 +167,33 @@ createApp({
                 }
             ],
             activeChat: 0,
+            newMessage: "",
+            dateNow: luxon.DateTime.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss') 
         }
     },
     methods: {
         becomeActive(index){
             this.activeChat= index;
         },
+        sendMessage(){
+            let obj= {
+                date: this.dateNow,
+                message: this.newMessage,
+                status: 'sent',
+            }
+            this.contacts[this.activeChat].messages.push(obj)
+            this.newMessage="";
+            this.sendAnswer()
+        },
+        sendAnswer(){
+            answer= setTimeout(() =>{
+                let obj= {
+                    date: this.dateNow,
+                    message: 'Oke!',
+                    status: 'received',
+                }
+                this.contacts[this.activeChat].messages.push(obj)
+            }, 1000)
+        }
     },
 }).mount('#app')
