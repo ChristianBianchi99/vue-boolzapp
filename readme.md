@@ -16,3 +16,12 @@ PROBLEMA : MILESTONE 2 : Visualizzazione dinamica dei messaggi e click sul conta
 4 - Stabilisco le condizioni necessarie a visualizzare correttamente i messaggi della chat;
 5 - Imposta il click sui contatti in modo da poter stabilire la chat attiva;
 6 - FINISH
+
+PROBLEMA : MILESTONE 3 : Aggiunta di un messaggio e risposta dall’interlocutore;
+
+1 - START
+2 - Creo la variante che andrà a contenere l'orario e la data odierna;
+3 - Creo la funzione che al click dell'invio aggiunga il messaggio alla chat;
+    3.1 - Prendo il contenuto dell'input della chat e alla pressione dell'invio ne faccio un oggetto che verrà pushato all'interno dell'array dei messaggi;
+4 - Imposto la funzione che al click per l'invio di un messaggio attenda un secondo prima di inviare un messaggio di risposta preimpostato;
+5 - FINISH
