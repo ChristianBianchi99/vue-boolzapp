@@ -78,6 +78,9 @@ hr {
     width: 50px;
     margin: 0 20px 0 10px;
 }
+.active {
+    background-color: rgb(233, 235, 235);
+}
 /* FINE STILE CONTATTI */
 /* INIZIO STILE CONVERSAZIONI */
 .messages {
