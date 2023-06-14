@@ -25,3 +25,15 @@ PROBLEMA : MILESTONE 3 : Aggiunta di un messaggio e risposta dall’interlocutor
     3.1 - Prendo il contenuto dell'input della chat e alla pressione dell'invio ne faccio un oggetto che verrà pushato all'interno dell'array dei messaggi;
 4 - Imposto la funzione che al click per l'invio di un messaggio attenda un secondo prima di inviare un messaggio di risposta preimpostato;
 5 - FINISH
+
+PROBLEMA : MILESTONE 4 : Ricerca utenti
+
+1 - START
+2 - Imposto una variabile che vada a contenere l'input per la ricerca dei contatti;
+3 - Creo la funzione che andrà a ciclare i contatti e a verificare che i nomi presenti all'interno includano l'input dell'utente;
+4 - ? SE uno dei nomi dei contatti ha delle corrispondenze con l'input;
+    4.1 - La variabile visible rimarrà true;
+5 - : ALTRIMENTI SE i nomi non avranno corrispondenze;
+    5.1 - La variabile visible verrà impostata su false;
+6 - Aggiungo infine la visualizzazione o meno dei contatti nel dom a seconda dello stato di visible;
+7 - FINISH
