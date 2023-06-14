@@ -43,25 +43,27 @@
                             <div class="input">
                                 <div class="input-group">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inizia una nuova chat">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inizia una nuova chat" v-model="contactSearch" @input="searchContact">
                                 </div>
                             </div>
                             <div class="contactsList"> <!-- Inizio lista contatti -->
-                                <div class="contact d-flex justify-content-between" v-for="(contact, index) in contacts" :class="index === activeChat ? 'active' : ''" @click="becomeActive(index)">
-                                    <hr>
-                                    <div class="d-flex">
-                                        <div class="profileImg">
-                                            <img :src="contact.avatar" :alt="name">
-                                        </div>
-                                        <div class="name">
-                                            {{contact.name}}
-                                            <div class="lastMessage">
-                                                Ultimo messaggio inviato
+                                <div class="contact" v-for="(contact, index) in contacts" :class="index === activeChat ? 'active' : ''" @click="becomeActive(index)" v-show="contact.visible=== true">
+                                    <div class="d-flex justify-content-between">
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div class="profileImg">
+                                                <img :src="contact.avatar" :alt="name">
+                                            </div>
+                                            <div class="name">
+                                                {{contact.name}}
+                                                <div class="lastMessage">
+                                                    Ultimo messaggio inviato
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="time">
-                                        12:00
+                                        <div class="time">
+                                            12:00
+                                        </div>
                                     </div>
                                 </div>
                             </div> <!-- Fine lista contatti -->

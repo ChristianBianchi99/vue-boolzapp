@@ -167,8 +167,9 @@ createApp({
                 }
             ],
             activeChat: 0,
+            contactSearch: "",
             newMessage: "",
-            dateNow: luxon.DateTime.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss') 
+            dateNow: luxon.DateTime.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss')
         }
     },
     methods: {
@@ -194,6 +195,16 @@ createApp({
                 }
                 this.contacts[this.activeChat].messages.push(obj)
             }, 1000)
+        },
+        searchContact(){
+            for(let i=0; i<this.contacts.length; i++){
+                let contact= this.contacts[i]
+                if(!contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())){
+                    contact.visible= false;
+                } else {
+                    contact.visible= true;
+                }
+            }
         }
     },
 }).mount('#app')
