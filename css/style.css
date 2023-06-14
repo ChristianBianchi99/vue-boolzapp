@@ -106,6 +106,7 @@ hr {
     margin-bottom: 10px;
     max-width: 60%;
     min-width: 40%;
+    word-wrap: break-word;
 }
 .message .time {
     font-size: 10px;
@@ -192,6 +193,10 @@ img {
 header i {
     margin: 0 10px;
     color: rgb(177, 177, 177);
+}
+header i:hover, footer i:hover {
+    cursor: pointer;
+    color: rgb(80, 80, 80);
 }
 i {
     font-size: 20px

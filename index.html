@@ -112,7 +112,10 @@
                         <footer> <!-- Inizio footer -->
                             <i class="fa-regular fa-face-smile"></i>
                             <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
-                            <i class="fa-solid fa-microphone"></i>
+                            <div>
+                                <i class="fa-solid fa-microphone" v-if="newMessage===''"></i>
+                                <i class="fa-solid fa-paper-plane" v-else="" @click="sendMessage"></i>
+                            </div>
                         </footer> <!-- Fine footer -->
                     </div>
                 </div>
