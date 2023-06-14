@@ -37,3 +37,11 @@ PROBLEMA : MILESTONE 4 : Ricerca utenti
     5.1 - La variabile visible verrà impostata su false;
 6 - Aggiungo infine la visualizzazione o meno dei contatti nel dom a seconda dello stato di visible;
 7 - FINISH
+
+PROBLEMA : MILESTONE 5 : Cancella messaggio e visualizzazione ora e ultimo messaggio inviato/ricevuto
+
+1 - START
+2 - Aggiunta nel markup di un dropdown sui messaggi con l'opzione per cancellarli;
+3 - Creazione della funzione che recupererà l'indice del messaggio e lo andrà ad eliminare dall'array dei messaggi;
+4 - Aggiunta della visualizzazione dell'ora e dell'ultimo messaggio inviato/ricevuto tra i dettagli dei contatti;
+5 - FINISH
