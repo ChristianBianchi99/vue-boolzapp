@@ -169,7 +169,7 @@ createApp({
             activeChat: 0,
             contactSearch: "",
             newMessage: "",
-            dateNow: luxon.DateTime.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss')
+            dateNow: luxon.DateTime.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
         }
     },
     methods: {
@@ -177,14 +177,16 @@ createApp({
             this.activeChat= index;
         },
         sendMessage(){
-            let obj= {
-                date: this.dateNow,
-                message: this.newMessage,
-                status: 'sent',
+            if(this.newMessage !==""){
+                let obj= {
+                    date: this.dateNow,
+                    message: this.newMessage,
+                    status: 'sent',
+                }
+                this.contacts[this.activeChat].messages.push(obj)
+                this.newMessage="";
+                this.sendAnswer()
             }
-            this.contacts[this.activeChat].messages.push(obj)
-            this.newMessage="";
-            this.sendAnswer()
         },
         sendAnswer(){
             answer= setTimeout(() =>{
@@ -205,6 +207,9 @@ createApp({
                     contact.visible= true;
                 }
             }
+        },
+        deleteMessage(index){
+            this.contacts[this.activeChat].messages.splice(index, 1)
         }
     },
 }).mount('#app')
